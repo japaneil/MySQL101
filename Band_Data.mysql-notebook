@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\ndrop DATABASE test;\nCREATE DATABASE record_company;\n\nUSE record_company;\nCREATE TABLE test(\n    test_col INT\n    );\nALTER TABLE test \nADD another_col VARCHAR(225);\nDROP TABLE test;\n\nCREATE TABLE bands(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    PRIMARY KEY (id)\n);\nCREATE TABLE albums(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    release_year INT,\n    band_id INT NOT NULL,\n    PRIMARY KEY (id),\n    FOREIGN KEY (band_id) REFERENCES bands(id)\n);\nINSERT INTO bands (name) VALUES (\"Iron Maiden\");\n\n\n\n\n\n\n\nINSERT INTO bands(name) VALUES (\"Deuce\"),(\"Avenged Sevenfold\"), (\"Ankor\");\nSELECT * FROM bands;\nSELECT * FROM bands WHERE id<3;\nSELECT id AS \"ID\" FROM bands;\nSELECT * FROM bands ORDER BY name ASC;\nINSERT INTO albums(name, release_year, band_id) VALUES (\"The number of beats\", 1985, 1),\n(\"Nightmare\", 2018, 2),\n(\"Nightmare\", 2010, 3);\nSELECT DISTINCT name FROM albums;\nUPDATE albums SET release_year = 1982 WHERE release_year = 1985;\nUPDATE albums SET name = \"The number of Beasts\" WHERE band_id = 1;\nSELECT * FROM albums ORDER BY name DESC;\nUPDATE albums SET name = \"The Number Of Beasts\" WHERE band_id= 1;\n\nUSE record_company;\nUPDATE albums SET release_year = 1982 WHERE id = 1;\nSELECT * FROM albums;\nSELECT * FROM albums WHERE release_year > 2000;\nSELECT * FROM albums WHERE name LIKE \"%er%\";\nSELECT * FROM bands RIGHT JOIN albums ON bands.id = albums.band_id;\nUSE record_company;\n SELECT AVG(release_year) AS AVERAGE FROM albums ;\nSELECT SUM(id) AS sum FROM bands;\nSELECT band_id, COUNT(band_id) FROM albums GROUP BY band_id;\n",
+    "content": "\\about\ndrop DATABASE test;\nCREATE DATABASE record_company;\n\nUSE record_company;\nCREATE TABLE test(\n    test_col INT\n    );\nALTER TABLE test \nADD another_col VARCHAR(225);\nDROP TABLE test;\n\nCREATE TABLE bands(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    PRIMARY KEY (id)\n);\nCREATE TABLE albums(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    release_year INT,\n    band_id INT NOT NULL,\n    PRIMARY KEY (id),\n    FOREIGN KEY (band_id) REFERENCES bands(id)\n);\nINSERT INTO bands (name) VALUES (\"Iron Maiden\");\n\n\n\n\n\n\n\nINSERT INTO bands(name) VALUES (\"Deuce\"),(\"Avenged Sevenfold\"), (\"Ankor\");\nSELECT * FROM bands;\nSELECT * FROM bands WHERE id<3;\nSELECT id AS \"ID\" FROM bands;\nSELECT * FROM bands ORDER BY name ASC;\nINSERT INTO albums(name, release_year, band_id) VALUES (\"The number of beats\", 1985, 1),\n(\"Nightmare\", 2018, 2),\n(\"Nightmare\", 2010, 3);\nSELECT DISTINCT name FROM albums;\nUPDATE albums SET release_year = 1982 WHERE release_year = 1985;\nUPDATE albums SET name = \"The number of Beasts\" WHERE band_id = 1;\nSELECT * FROM albums ORDER BY name DESC;\nUPDATE albums SET name = \"The Number Of Beasts\" WHERE band_id= 1;\n\nUSE record_company;\nUPDATE albums SET release_year = 1982 WHERE id = 1;\nSELECT * FROM albums;\nSELECT * FROM albums WHERE release_year > 2000;\nSELECT * FROM albums WHERE name LIKE \"%er%\";\nSELECT * FROM bands RIGHT JOIN albums ON bands.id = albums.band_id;\nUSE record_company;\n SELECT AVG(release_year) AS AVERAGE FROM albums ;\nSELECT SUM(id) AS sum FROM bands;\nSELECT band_id, COUNT(band_id) FROM albums GROUP BY band_id;\nSELECT bands.name AS band_name, COUNT(albums.id) AS num_albums FROM bands LEFT JOIN albums ON bands.id=albums.band_id GROUP BY bands.id;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,11 +15,11 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 58,
+                    "lineNumber": 59,
                     "column": 1
                 },
                 "position": {
-                    "lineNumber": 58,
+                    "lineNumber": 59,
                     "column": 1
                 }
             }
@@ -27,10 +27,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 51,
+                "lineNumber": 38,
                 "column": 1
             },
-            "firstPositionDeltaTop": 18
+            "firstPositionDeltaTop": 110
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -1314,7 +1314,7 @@
                         "98493900-d5a9-4f44-bcd2-556d33fff61b"
                     ]
                 },
-                "currentHeight": 146.28125,
+                "currentHeight": 36,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1454,7 +1454,7 @@
                         "cd4ab396-4f6e-42f8-b22f-e8a2dc6b5766"
                     ]
                 },
-                "currentHeight": 91.09375,
+                "currentHeight": 36,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1507,7 +1507,7 @@
                         "7e442030-4d3e-4ffd-d820-9770f1f8063e"
                     ]
                 },
-                "currentHeight": 91.09375,
+                "currentHeight": 36,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1560,7 +1560,7 @@
                         "3f0a451c-96ca-4703-e998-2040f12a7037"
                     ]
                 },
-                "currentHeight": 139.28125,
+                "currentHeight": 36,
                 "statements": [
                     {
                         "delimiter": ";",
@@ -1622,6 +1622,79 @@
             "state": {
                 "start": 58,
                 "end": 58,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "c1b7897c-fbaf-481e-8cbb-f1ee847dc1e8"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 136
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "c1b7897c-fbaf-481e-8cbb-f1ee847dc1e8",
+                    "rows": [
+                        {
+                            "0": "Iron Maiden",
+                            "1": 1
+                        },
+                        {
+                            "0": "Deuce",
+                            "1": 1
+                        },
+                        {
+                            "0": "Avenged Sevenfold",
+                            "1": 1
+                        },
+                        {
+                            "0": "Ankor",
+                            "1": 0
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "band_name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "num_albums",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 4 records retrieved in 1.006ms"
+                    },
+                    "totalRowCount": 4,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT bands.name AS band_name, COUNT(albums.id) AS num_albums FROM bands LEFT JOIN albums ON bands.id=albums.band_id GROUP BY bands.id"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 59,
+                "end": 59,
                 "language": "mysql",
                 "currentHeight": 180,
                 "statements": [
