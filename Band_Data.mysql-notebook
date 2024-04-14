@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\ndrop DATABASE test;\nCREATE DATABASE record_company;\n\nUSE record_company;\nCREATE TABLE test(\n    test_col INT\n    );\nALTER TABLE test \nADD another_col VARCHAR(225);\nDROP TABLE test;\n\nCREATE TABLE bands(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    PRIMARY KEY (id)\n);\nCREATE TABLE albums(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    release_year INT,\n    band_id INT NOT NULL,\n    PRIMARY KEY (id),\n    FOREIGN KEY (band_id) REFERENCES bands(id)\n);\nINSERT INTO bands (name) VALUES (\"Iron Maiden\");\n\n\n\n\n\n\n\nINSERT INTO bands(name) VALUES (\"Deuce\"),(\"Avenged Sevenfold\"), (\"Ankor\");\nSELECT * FROM bands;\nSELECT * FROM bands WHERE id<3;\nSELECT id AS \"ID\" FROM bands;\nSELECT * FROM bands ORDER BY name ASC;\nINSERT INTO albums(name, release_year, band_id) VALUES (\"The number of beats\", 1985, 1),\n(\"Nightmare\", 2018, 2),\n(\"Nightmare\", 2010, 3);\nSELECT DISTINCT name FROM albums;\nUPDATE albums SET release_year = 1982 WHERE release_year = 1985;\nUPDATE albums SET name = \"The number of Beasts\" WHERE band_id = 1;\nSELECT * FROM albums ORDER BY name DESC;\n",
+    "content": "\\about\ndrop DATABASE test;\nCREATE DATABASE record_company;\n\nUSE record_company;\nCREATE TABLE test(\n    test_col INT\n    );\nALTER TABLE test \nADD another_col VARCHAR(225);\nDROP TABLE test;\n\nCREATE TABLE bands(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    PRIMARY KEY (id)\n);\nCREATE TABLE albums(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    release_year INT,\n    band_id INT NOT NULL,\n    PRIMARY KEY (id),\n    FOREIGN KEY (band_id) REFERENCES bands(id)\n);\nINSERT INTO bands (name) VALUES (\"Iron Maiden\");\n\n\n\n\n\n\n\nINSERT INTO bands(name) VALUES (\"Deuce\"),(\"Avenged Sevenfold\"), (\"Ankor\");\nSELECT * FROM bands;\nSELECT * FROM bands WHERE id<3;\nSELECT id AS \"ID\" FROM bands;\nSELECT * FROM bands ORDER BY name ASC;\nINSERT INTO albums(name, release_year, band_id) VALUES (\"The number of beats\", 1985, 1),\n(\"Nightmare\", 2018, 2),\n(\"Nightmare\", 2010, 3);\nSELECT DISTINCT name FROM albums;\nUPDATE albums SET release_year = 1982 WHERE release_year = 1985;\nUPDATE albums SET name = \"The number of Beasts\" WHERE band_id = 1;\nSELECT * FROM albums ORDER BY name DESC;\nUPDATE albums SET name = \"The Number Of Beasts\" WHERE band_id= 1;\n\nUSE record_company;\nUPDATE albums SET release_year = 1982 WHERE id = 1;\nSELECT * FROM albums;\nSELECT * FROM albums WHERE release_year > 2000;\nSELECT * FROM albums WHERE name LIKE \"%er%\";\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 38,
-                    "column": 21
+                    "lineNumber": 53,
+                    "column": 1
                 },
                 "position": {
-                    "lineNumber": 38,
-                    "column": 21
+                    "lineNumber": 53,
+                    "column": 1
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 37,
+                "lineNumber": 43,
                 "column": 1
             },
-            "firstPositionDeltaTop": 32
+            "firstPositionDeltaTop": -14
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -431,7 +431,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "35811fb2-57a5-49e8-8b02-022ba086e08f"
+                        "7153bdbf-0add-46aa-a80d-7d690aba326f"
                     ]
                 },
                 "currentHeight": 36,
@@ -449,8 +449,8 @@
             },
             "data": [
                 {
-                    "tabId": "2d365ddb-8db2-445d-9c0f-c6d74aa64997",
-                    "resultId": "35811fb2-57a5-49e8-8b02-022ba086e08f",
+                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
+                    "resultId": "7153bdbf-0add-46aa-a80d-7d690aba326f",
                     "rows": [
                         {
                             "0": 1,
@@ -504,7 +504,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "273eec3a-7270-4171-ba5c-074e7519d2a5"
+                        "f0bd5a38-597e-4dbc-a4a6-e3f4d82e0d0b"
                     ]
                 },
                 "currentHeight": 115.1875,
@@ -531,8 +531,8 @@
             },
             "data": [
                 {
-                    "tabId": "2d365ddb-8db2-445d-9c0f-c6d74aa64997",
-                    "resultId": "273eec3a-7270-4171-ba5c-074e7519d2a5",
+                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
+                    "resultId": "f0bd5a38-597e-4dbc-a4a6-e3f4d82e0d0b",
                     "rows": [
                         {
                             "0": 1,
@@ -578,7 +578,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "de6994da-4942-40c9-9ee1-fd916f8ff850"
+                        "7db520ac-ab43-4866-81dc-0d03b22ebc4e"
                     ]
                 },
                 "currentHeight": 163.375,
@@ -596,8 +596,8 @@
             },
             "data": [
                 {
-                    "tabId": "2d365ddb-8db2-445d-9c0f-c6d74aa64997",
-                    "resultId": "de6994da-4942-40c9-9ee1-fd916f8ff850",
+                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
+                    "resultId": "7db520ac-ab43-4866-81dc-0d03b22ebc4e",
                     "rows": [
                         {
                             "0": 1
@@ -640,7 +640,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "d87b3518-9e7d-458c-b01e-c07d8885d395"
+                        "2a1f95aa-f82e-4926-eb10-e5c4809cf5d0"
                     ]
                 },
                 "currentHeight": 163.375,
@@ -658,8 +658,8 @@
             },
             "data": [
                 {
-                    "tabId": "2d365ddb-8db2-445d-9c0f-c6d74aa64997",
-                    "resultId": "d87b3518-9e7d-458c-b01e-c07d8885d395",
+                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
+                    "resultId": "2a1f95aa-f82e-4926-eb10-e5c4809cf5d0",
                     "rows": [
                         {
                             "0": 4,
@@ -744,7 +744,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "5ef35a15-ec08-4a4e-a572-ce38df3792da"
+                        "09c97637-47b9-4cef-9a4c-f817e2c28185"
                     ]
                 },
                 "currentHeight": 115.1875,
@@ -762,8 +762,8 @@
             },
             "data": [
                 {
-                    "tabId": "2d365ddb-8db2-445d-9c0f-c6d74aa64997",
-                    "resultId": "5ef35a15-ec08-4a4e-a572-ce38df3792da",
+                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
+                    "resultId": "09c97637-47b9-4cef-9a4c-f817e2c28185",
                     "rows": [
                         {
                             "0": "The number of beats"
@@ -862,7 +862,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "6a4eb9fd-364f-48d1-df74-92a014b48b21"
+                        "bf84d474-f146-475c-ac15-d10b5f102429"
                     ]
                 },
                 "currentHeight": 139.28125,
@@ -880,8 +880,8 @@
             },
             "data": [
                 {
-                    "tabId": "2d365ddb-8db2-445d-9c0f-c6d74aa64997",
-                    "resultId": "6a4eb9fd-364f-48d1-df74-92a014b48b21",
+                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
+                    "resultId": "bf84d474-f146-475c-ac15-d10b5f102429",
                     "rows": [
                         {
                             "0": 1,
@@ -946,7 +946,367 @@
         {
             "state": {
                 "start": 46,
-                "end": 46,
+                "end": 47,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "a290f570-871c-46fb-9fa3-b1db3293b7e2",
+                            "content": "OK, 1 row affected in 12.999ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 65
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 65,
+                            "length": 1
+                        },
+                        "contentStart": 64,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 48,
+                "end": 48,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "0a147eb1-6550-4e81-c211-5348627bb04c",
+                            "content": "OK, 0 records retrieved in 0s"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 19
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 19,
+                            "length": 0
+                        },
+                        "contentStart": 19,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 49,
+                "end": 49,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "3786de73-7059-4b7f-c4b3-f57c824665c4",
+                            "content": "OK, 0 records retrieved in 0s"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 51
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 50,
+                "end": 50,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "da2039b0-cca1-4c70-9ed5-06e8f50b4d92"
+                    ]
+                },
+                "currentHeight": 160.1875,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 21
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
+                    "resultId": "da2039b0-cca1-4c70-9ed5-06e8f50b4d92",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "The Number Of Beasts",
+                            "2": 1982,
+                            "3": 1
+                        },
+                        {
+                            "0": 2,
+                            "1": "Nightmare",
+                            "2": 2018,
+                            "3": 2
+                        },
+                        {
+                            "0": 3,
+                            "1": "Nightmare",
+                            "2": 2010,
+                            "3": 3
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "release_year",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "band_id",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 3 records retrieved in 1.002ms"
+                    },
+                    "totalRowCount": 3,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM albums"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 51,
+                "end": 51,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "c5248175-8474-4ac5-e193-7e4f3b85a7c5"
+                    ]
+                },
+                "currentHeight": 115.1875,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 47
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
+                    "resultId": "c5248175-8474-4ac5-e193-7e4f3b85a7c5",
+                    "rows": [
+                        {
+                            "0": 2,
+                            "1": "Nightmare",
+                            "2": 2018,
+                            "3": 2
+                        },
+                        {
+                            "0": 3,
+                            "1": "Nightmare",
+                            "2": 2010,
+                            "3": 3
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "release_year",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "band_id",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 0s"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM albums WHERE release_year > 2000"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 52,
+                "end": 52,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "9f5caaed-b520-4fb0-9242-d0d36541298a"
+                    ]
+                },
+                "currentHeight": 110,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 44
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
+                    "resultId": "9f5caaed-b520-4fb0-9242-d0d36541298a",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "The Number Of Beasts",
+                            "2": 1982,
+                            "3": 1
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "release_year",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "band_id",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 0.998ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM albums WHERE name LIKE \"%er%\""
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 53,
+                "end": 53,
                 "language": "mysql",
                 "currentHeight": 180,
                 "statements": [
