@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\ndrop DATABASE test;\nCREATE DATABASE record_company;\n\nUSE record_company;\nCREATE TABLE test(\n    test_col INT\n    );\nALTER TABLE test \nADD another_col VARCHAR(225);\nDROP TABLE test;\n\nCREATE TABLE bands(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    PRIMARY KEY (id)\n);\nCREATE TABLE albums(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    release_year INT,\n    band_id INT NOT NULL,\n    PRIMARY KEY (id),\n    FOREIGN KEY (band_id) REFERENCES bands(id)\n);\nINSERT INTO bands (name) VALUES (\"Iron Maiden\");\n\n\n\n\n\n\n\nINSERT INTO bands(name) VALUES (\"Deuce\"),(\"Avenged Sevenfold\"), (\"Ankor\");\nSELECT * FROM bands;\nSELECT * FROM bands WHERE id<3;\nSELECT id AS \"ID\" FROM bands;\nSELECT * FROM bands ORDER BY name ASC;\nINSERT INTO albums(name, release_year, band_id) VALUES (\"The number of beats\", 1985, 1),\n(\"Nightmare\", 2018, 2),\n(\"Nightmare\", 2010, 3);\nSELECT DISTINCT name FROM albums;\nUPDATE albums SET release_year = 1982 WHERE release_year = 1985;\nUPDATE albums SET name = \"The number of Beasts\" WHERE band_id = 1;\nSELECT * FROM albums ORDER BY name DESC;\nUPDATE albums SET name = \"The Number Of Beasts\" WHERE band_id= 1;\n\nUSE record_company;\nUPDATE albums SET release_year = 1982 WHERE id = 1;\nSELECT * FROM albums;\nSELECT * FROM albums WHERE release_year > 2000;\nSELECT * FROM albums WHERE name LIKE \"%er%\";\n",
+    "content": "\\about\ndrop DATABASE test;\nCREATE DATABASE record_company;\n\nUSE record_company;\nCREATE TABLE test(\n    test_col INT\n    );\nALTER TABLE test \nADD another_col VARCHAR(225);\nDROP TABLE test;\n\nCREATE TABLE bands(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    PRIMARY KEY (id)\n);\nCREATE TABLE albums(\n    id INT NOT NULL AUTO_INCREMENT,\n    name VARCHAR(255) NOT NULL,\n    release_year INT,\n    band_id INT NOT NULL,\n    PRIMARY KEY (id),\n    FOREIGN KEY (band_id) REFERENCES bands(id)\n);\nINSERT INTO bands (name) VALUES (\"Iron Maiden\");\n\n\n\n\n\n\n\nINSERT INTO bands(name) VALUES (\"Deuce\"),(\"Avenged Sevenfold\"), (\"Ankor\");\nSELECT * FROM bands;\nSELECT * FROM bands WHERE id<3;\nSELECT id AS \"ID\" FROM bands;\nSELECT * FROM bands ORDER BY name ASC;\nINSERT INTO albums(name, release_year, band_id) VALUES (\"The number of beats\", 1985, 1),\n(\"Nightmare\", 2018, 2),\n(\"Nightmare\", 2010, 3);\nSELECT DISTINCT name FROM albums;\nUPDATE albums SET release_year = 1982 WHERE release_year = 1985;\nUPDATE albums SET name = \"The number of Beasts\" WHERE band_id = 1;\nSELECT * FROM albums ORDER BY name DESC;\nUPDATE albums SET name = \"The Number Of Beasts\" WHERE band_id= 1;\n\nUSE record_company;\nUPDATE albums SET release_year = 1982 WHERE id = 1;\nSELECT * FROM albums;\nSELECT * FROM albums WHERE release_year > 2000;\nSELECT * FROM albums WHERE name LIKE \"%er%\";\nSELECT * FROM bands RIGHT JOIN albums ON bands.id = albums.band_id;\nUSE record_company;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 53,
-                    "column": 1
+                    "lineNumber": 52,
+                    "column": 33
                 },
                 "position": {
-                    "lineNumber": 53,
-                    "column": 1
+                    "lineNumber": 52,
+                    "column": 33
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 43,
+                "lineNumber": 46,
                 "column": 1
             },
-            "firstPositionDeltaTop": -14
+            "firstPositionDeltaTop": 47
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -431,7 +431,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "7153bdbf-0add-46aa-a80d-7d690aba326f"
+                        "0d48ea46-84e5-4c4a-ecff-a95773e80bbe"
                     ]
                 },
                 "currentHeight": 36,
@@ -449,8 +449,8 @@
             },
             "data": [
                 {
-                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
-                    "resultId": "7153bdbf-0add-46aa-a80d-7d690aba326f",
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "0d48ea46-84e5-4c4a-ecff-a95773e80bbe",
                     "rows": [
                         {
                             "0": 1,
@@ -504,7 +504,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "f0bd5a38-597e-4dbc-a4a6-e3f4d82e0d0b"
+                        "bec76ed7-ee0d-44f4-d9ba-b8f51c40750e"
                     ]
                 },
                 "currentHeight": 115.1875,
@@ -531,8 +531,8 @@
             },
             "data": [
                 {
-                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
-                    "resultId": "f0bd5a38-597e-4dbc-a4a6-e3f4d82e0d0b",
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "bec76ed7-ee0d-44f4-d9ba-b8f51c40750e",
                     "rows": [
                         {
                             "0": 1,
@@ -578,7 +578,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "7db520ac-ab43-4866-81dc-0d03b22ebc4e"
+                        "346b471a-3027-448d-b4c3-0ce73db48c0c"
                     ]
                 },
                 "currentHeight": 163.375,
@@ -596,8 +596,8 @@
             },
             "data": [
                 {
-                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
-                    "resultId": "7db520ac-ab43-4866-81dc-0d03b22ebc4e",
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "346b471a-3027-448d-b4c3-0ce73db48c0c",
                     "rows": [
                         {
                             "0": 1
@@ -640,7 +640,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "2a1f95aa-f82e-4926-eb10-e5c4809cf5d0"
+                        "c42cf99c-35bd-4f45-9e2b-4195c4837d46"
                     ]
                 },
                 "currentHeight": 163.375,
@@ -658,8 +658,8 @@
             },
             "data": [
                 {
-                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
-                    "resultId": "2a1f95aa-f82e-4926-eb10-e5c4809cf5d0",
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "c42cf99c-35bd-4f45-9e2b-4195c4837d46",
                     "rows": [
                         {
                             "0": 4,
@@ -744,7 +744,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "09c97637-47b9-4cef-9a4c-f817e2c28185"
+                        "e7c7c6c3-49fd-4218-ad92-1790309d8287"
                     ]
                 },
                 "currentHeight": 115.1875,
@@ -762,8 +762,8 @@
             },
             "data": [
                 {
-                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
-                    "resultId": "09c97637-47b9-4cef-9a4c-f817e2c28185",
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "e7c7c6c3-49fd-4218-ad92-1790309d8287",
                     "rows": [
                         {
                             "0": "The number of beats"
@@ -862,7 +862,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "bf84d474-f146-475c-ac15-d10b5f102429"
+                        "af92777f-66e5-4ee3-a6cd-69e728442243"
                     ]
                 },
                 "currentHeight": 139.28125,
@@ -880,8 +880,8 @@
             },
             "data": [
                 {
-                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
-                    "resultId": "bf84d474-f146-475c-ac15-d10b5f102429",
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "af92777f-66e5-4ee3-a6cd-69e728442243",
                     "rows": [
                         {
                             "0": 1,
@@ -1062,7 +1062,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "da2039b0-cca1-4c70-9ed5-06e8f50b4d92"
+                        "4a6cc5c2-3441-4381-8afa-ae61366cbabc"
                     ]
                 },
                 "currentHeight": 160.1875,
@@ -1080,8 +1080,8 @@
             },
             "data": [
                 {
-                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
-                    "resultId": "da2039b0-cca1-4c70-9ed5-06e8f50b4d92",
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "4a6cc5c2-3441-4381-8afa-ae61366cbabc",
                     "rows": [
                         {
                             "0": 1,
@@ -1151,7 +1151,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "c5248175-8474-4ac5-e193-7e4f3b85a7c5"
+                        "0f9d3149-713e-4f81-a94d-bb0c8b4e32bd"
                     ]
                 },
                 "currentHeight": 115.1875,
@@ -1169,8 +1169,8 @@
             },
             "data": [
                 {
-                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
-                    "resultId": "c5248175-8474-4ac5-e193-7e4f3b85a7c5",
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "0f9d3149-713e-4f81-a94d-bb0c8b4e32bd",
                     "rows": [
                         {
                             "0": 2,
@@ -1234,7 +1234,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "9f5caaed-b520-4fb0-9242-d0d36541298a"
+                        "132cb247-499e-429e-bc6e-d6b60c1d0c5f"
                     ]
                 },
                 "currentHeight": 110,
@@ -1252,8 +1252,8 @@
             },
             "data": [
                 {
-                    "tabId": "28ae0f02-43a7-4577-8a96-4bc468b7e5c4",
-                    "resultId": "9f5caaed-b520-4fb0-9242-d0d36541298a",
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "132cb247-499e-429e-bc6e-d6b60c1d0c5f",
                     "rows": [
                         {
                             "0": 1,
@@ -1307,6 +1307,146 @@
             "state": {
                 "start": 53,
                 "end": 53,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "98493900-d5a9-4f44-bcd2-556d33fff61b"
+                    ]
+                },
+                "currentHeight": 146.28125,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 67
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "388bdb9e-9485-444b-9842-c87f5d922363",
+                    "resultId": "98493900-d5a9-4f44-bcd2-556d33fff61b",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Iron Maiden",
+                            "2": 1,
+                            "3": "The Number Of Beasts",
+                            "4": 1982,
+                            "5": 1
+                        },
+                        {
+                            "0": 2,
+                            "1": "Deuce",
+                            "2": 2,
+                            "3": "Nightmare",
+                            "4": 2018,
+                            "5": 2
+                        },
+                        {
+                            "0": 3,
+                            "1": "Avenged Sevenfold",
+                            "2": 3,
+                            "3": "Nightmare",
+                            "4": 2010,
+                            "5": 3
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "id",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "name",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "release_year",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4
+                            }
+                        },
+                        {
+                            "title": "band_id",
+                            "field": "5",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 3 records retrieved in 1ms"
+                    },
+                    "totalRowCount": 3,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM bands RIGHT JOIN albums ON bands.id = albums.band_id"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 54,
+                "end": 54,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "6fe0257a-3af1-44eb-af56-a64722a21cd5",
+                            "content": "OK, 0 records retrieved in 0.522ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 19
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 55,
+                "end": 55,
                 "language": "mysql",
                 "currentHeight": 180,
                 "statements": [
